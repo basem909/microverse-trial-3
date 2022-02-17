@@ -4,47 +4,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" media="(max-width: 800px)" href="css copy/style.css">
+    <link rel="stylesheet" media="(max-width: 800px)" href="css_copy/style.css">
 
   </head>
 
   <body>
-    <nav class="nav flex-column navbar-fixed-top navbar-fixed-left">
-      <header>Java script Documentation</header>
-      <a class="nav-link active" href="#Introduction">Introduccion</a>
-      <a class="nav-link active" href="#Variables">Variables</a>
-      <a class="nav-link active" href="#Declaring_Variables">Declaring variables</a>
-      <a class="nav-link active" href="#Variable_scope">Variable_scope</a>
-      <a class="nav-link active" href="#Data_types">Declaring variables</a>
-
-    </nav>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <!-- Logo and responsive toggle -->
         <div class="navbar-header">
-          <a id="profile-link" class="navbar-brand" href="https://github.com/Leonardodcv?tab=repositories"
-            target="_blank">
-            My portafolio :)
+          <a id="profile-link" class="navbar-brand" href="">
+            <header>Java script Documentation</header>
           </a>
         </div>
-        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li><a href="#Introduction">Introduction</a></li>
-            <li><a href="#Variables">Variables</a></li>
-            <li><a href="#Declaring_Variables">Declaring variables</a></li>
-            <li><a href="#Variable_scope">Variable scope</a></li>
-            <li><a href="#Data_types">Data_types</a></li>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Variables2">Declaring Varibles</a></li>
+            <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+            <li><a class="nav-link" href="#Data_types">Data types</a></li>
           </ul>
         </div>
       </div>
     </nav>
-
-
-    <div id="main-doc">
-      <section class="main-section" id="Introduccion">
-        <header>First Element</header>
+    <br><br><br>
+    <main id="main-doc" role="main">
+      <section class="main-section" id="Introduction">
+        <header><h1>Introduction</h1></header>
         <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
         <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
         <ol>
@@ -54,47 +40,21 @@
       </section>
 
       <section class="main-section" id="Variables">
-        <header>
-          Variables
-        </header>
-        <p>
-          You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
-        </p>
-        <p>
-          A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).
-        </p>
-        <p>
-          You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.
-        </p>
+        <header>Variables</header>
+        <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+        <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+        <p>ou can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
       </section>
 
-      <section class="main-section" id="Declaring_Variables">
-        <header>
-          Declaring Varibles
-        </header>
-        <p>
-          You can declare a variable in three ways:
-          With the keyword var. For example,
-
-        </p>
+      <section class="main-section" id="Variables2">
+        <header>Declaring Varibles</header>
+        <p>You can declare a variable in three ways: With the keyword var. For example,</p>
         <code>var n = 34;</code>
-        <p>
-          This syntax can be used to declare both local and global variables.
-
-          By simply assigning it a value. For example,
-
-        </p>
+        <p>This syntax can be used to declare both local and global variables. By simply assigning it a value. For example,</p>
         <code>n = 35;</code>
-        <p>
-          This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.
-
-          With the keyword let. For example,
-
-        </p>
+        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant. With the keyword let. For example,</p>
         <code> let z = 65;</code>
-        <p>
-          This syntax can be used to declare a block scope local variable. See Variable scope below.
-        </p>
+        <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
       </section>
 
       <section class="main-section" id="Variable_scope">
@@ -103,8 +63,7 @@
         <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
         <code>if (true) { var x = 5; } console.log(x); // 5</code>
         <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
-        <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not</code>
-        <code>defined</code>
+        <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not defined</code>
       </section>
 
       <section class="main-section" id="Data_types">
@@ -120,8 +79,8 @@
           <li>Object</li>
         </ul>
       </section>
-
     </div>
+    </main>
     
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>    
     <script  src="js/index.js"></script>
